@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  width: 95vw;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.header h2 {
+  font-size: 2rem;
+  font-weight: 450;
+}
+.header p {
+  max-width: 50rem;
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgba(109, 106, 106, 0.938);
+}
+.cardcontainer {
+  width: 70vw; /* Full viewport width */
+  padding: 0; /* Remove padding if unnecessary */
+  margin-left: 0; /* Try reducing or removing this */
+  margin-right: 0;
+  display: grid;
+  /* height: 40rem; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: repeat(2, 1fr); */
+  gap: 1.5rem;
+}
+/* @media (max-width: 950px) {
+  .cardcontainer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+} */
+/* @media (min-width: 1460px) {
+  .cardcontainer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1159px) {
+  .cardcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+} */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  border: solid rgba(116, 113, 113, 0.61) 1px;
+  box-shadow: 0px 0px 20px 1px rgba(102, 99, 99, 0.884);
+  border: solid 2px rgba(49, 48, 48, 0.89);
+  height: 100%;
+}
+#cardsimg {
+  width: 100%;
+  height: 16rem;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  object-fit: cover;
+}
+@media (max-width: 1670px) {
+  #cardsimg {
+    width: 100%;
+    height: 12rem;
+  }
+}
+
+.cards:hover #cardsimg {
+  transform: scale(1.2);
+  transition-duration: 400ms;
+}
+.cardtext {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.cards a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.21rem;
+  overflow: hidden;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.cards p {
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+.cardfooter {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+}
+/* @media (min-width: 1670px) {
+  .cardfooter {
+    width: 80%;
+    height: 2rem;
+  }
+} */
+#right span {
+  border: solid 1px black;
+  padding: 4px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+#left img {
+  height: 80%;
+  width: 27%;
+  margin-bottom: 1.3px;
+}
+#authorinfo span {
+  display: block;
+}
+#right {
+  display: flex;
+  align-items: flex-end;
+}
+#right span {
+  margin-bottom: 1.3px;
+}
+#authorinfo #name {
+  color: rgb(34, 34, 167);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+@media (max-width: 950px) {
+  #authorinfo #name {
+    font-size: 1rem;
+  }
+  #authorinfo #date {
+    font-size: 0.8rem;
+  }
+}
+/* @media (min-width: 1670px) {
+  #authorinfo #name {
+    font-size: 0.8rem;
+  }
+  #authorinfo #date {
+    font-size: 0.8rem;
+  }
+} */
+#authorinfo #date {
+  color: rgb(70, 66, 66);
+  font-weight: 520;
+}
